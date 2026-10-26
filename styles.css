@@ -1,0 +1,47 @@
+:root {
+    --navy: #071a33;
+    --navy-2: #0d2b50;
+    --blue: #394bb8;
+    --green: #9bd83f;
+    --cyan: #38d9ee;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background: white;
+    color: #182942;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: white;
+    border-bottom: 1px solid #dfe7f1;
+}
+
+.hero {
+    color: white;
+    padding: 80px 20px;
+    background: linear-gradient(
+        120deg,
+        #050e20,
+        #0a2243,
+        #0b3155
+    );
+}
+
+h1 span {
+    color: var(--green);
+}
+
+.button-primary {
+    background: var(--blue);
+    color: white;
+    padding: 13px 19px;
+    border-radius: 10px;
+    font-weight: bold;
+}
