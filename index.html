@@ -370,6 +370,75 @@
 
     .services, .process, .cta-band { background: var(--pale); }
 
+    .service-spotlight {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 28px;
+      align-items: center;
+      margin: 0 0 36px;
+      padding: 24px 20px 18px;
+      border-radius: 24px;
+      background: #050b17;
+      border: 1px solid rgba(57,75,184,.2);
+      box-shadow: 0 28px 50px rgba(6,14,27,.18);
+    }
+
+    .service-coverage-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      color: #4c67d6;
+      text-transform: uppercase;
+      line-height: .82;
+      letter-spacing: -.08em;
+      font-weight: 900;
+    }
+
+    .service-coverage-copy .big {
+      font-size: clamp(3.4rem, 5vw, 7.1rem);
+      display: block;
+      text-shadow: 0 0 18px rgba(76,103,214,.22);
+    }
+
+    .service-coverage-copy .small {
+      font-size: clamp(1rem, 1.8vw, 2.1rem);
+      letter-spacing: -.05em;
+      display: block;
+      margin-top: 6px;
+    }
+
+    .service-map-panel {
+      position: relative;
+      min-height: 340px;
+      padding: 24px 18px 10px;
+      border-radius: 18px;
+      background: #f4f5f7;
+      overflow: hidden;
+      border: 1px solid rgba(11,18,32,.08);
+    }
+
+    .service-map-panel .map-label {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      color: #071a33;
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      font-style: italic;
+    }
+
+    .service-map {
+      position: absolute;
+      inset: 30px 14px 10px;
+      width: calc(100% - 28px);
+      height: calc(100% - 40px);
+      display: block;
+    }
+
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3,1fr);
@@ -711,6 +780,8 @@
       .service-grid { grid-template-columns: repeat(2,1fr); }
       .process-grid { grid-template-columns: repeat(2,1fr); }
       .about-grid { gap: 32px; }
+      .service-spotlight { grid-template-columns: 1fr; }
+      .service-coverage-copy { align-items: center; }
     }
 
     @media (max-width: 700px) {
@@ -763,6 +834,8 @@
       .hero-points { flex-direction: column; gap: 10px; }
       .trust-grid { gap: 14px 8px; }
       .trust-item { font-size: .75rem; }
+      .service-map-panel { min-height: 280px; }
+      .service-map-panel .map-label { font-size: .68rem; }
     }
   </style>
 </head>
@@ -797,7 +870,7 @@
           <div class="eyebrow">Technology that moves you forward</div>
           <h1>Building connections for a <span>faster future.</span></h1>
           <p class="hero-tagline">Fiber-Focused. Future-Ready. Family Owned</p>
-          <p class="hero-copy">5G Technology Partners is a family-owned company with well over 10 years of experience specializing in underground and aerial fiber installation. We’ve proudly served clients across the United States, delivering high-quality fiber infrastructure solutions that meet the demands of today’s fast-paced, connected world. Our team is dedicated to excellence, safety, and customer satisfaction—values that guide every project we take on. Whether it’s a small local job or a large-scale national rollout, we bring the same level of care, professionalism, and attention to detail to ensure long-lasting results and strong client relationships.</p>
+          <p class="hero-copy">5G Technology Partners is a family-owned company with well over 10 years of experience specializing in underground and aerial fiber installation. We’ve proudly served businesses and communities across the region with dependable infrastructure and practical connectivity solutions.</p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Talk to Our Team →</a>
@@ -857,6 +930,87 @@
           <div class="eyebrow">What we do</div>
           <h2>Infrastructure built around your needs.</h2>
           <p>Explore services designed to help create dependable, organized, and scalable connectivity for your home or business.</p>
+        </div>
+
+        <div class="service-spotlight">
+          <div class="service-coverage-copy" aria-label="23 states, 10 plus years of experience">
+            <span class="big">23</span>
+            <span class="small">states</span>
+            <span class="big" style="margin-top: 12px;">10+</span>
+            <span class="small">years of</span>
+            <span class="small">expertise</span>
+          </div>
+
+          <div class="service-map-panel" aria-label="United States coverage map">
+            <div class="map-label">advanced telecommunications networks.</div>
+            <svg class="service-map" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coverage map of the United States">
+              <g fill="#0a0f1a">
+                <path d="M88 76 L143 58 L171 76 L205 88 L226 103 L220 128 L242 146 L233 170 L204 182 L165 182 L145 198 L102 170 L80 145 L63 128 L72 97 Z"/>
+                <path d="M139 203 L193 215 L219 229 L215 255 L168 274 L156 260 L132 252 L124 227 Z"/>
+                <path d="M216 90 L289 78 L346 92 L390 112 L426 130 L418 157 L384 176 L343 170 L311 189 L274 186 L245 169 L228 142 L214 120 Z"/>
+                <path d="M240 191 L292 196 L335 208 L362 231 L353 270 L324 283 L296 272 L252 269 L220 250 L214 218 Z"/>
+                <path d="M351 101 L439 90 L478 98 L522 112 L531 146 L493 162 L451 170 L412 170 L373 152 L359 123 Z"/>
+                <path d="M456 182 L540 176 L578 190 L563 230 L514 238 L470 224 L447 203 Z"/>
+                <path d="M351 237 L412 230 L447 249 L438 310 L397 331 L347 315 L332 282 Z"/>
+                <path d="M449 240 L518 241 L560 254 L572 306 L531 329 L483 327 L452 293 Z"/>
+                <path d="M601 118 L663 100 L712 112 L739 133 L741 157 L699 174 L648 176 L616 150 Z"/>
+                <path d="M576 213 L635 204 L692 216 L699 248 L647 275 L592 268 L565 241 Z"/>
+                <path d="M648 279 L718 271 L763 286 L778 320 L741 344 L689 346 L645 326 Z"/>
+                <path d="M692 177 L745 180 L784 201 L799 234 L770 247 L739 235 L705 218 Z"/>
+              </g>
+
+              <g fill="#4d63c8" stroke="#3c4d95" stroke-width="2">
+                <path d="M88 76 L143 58 L171 76 L205 88 L226 103 L220 128 L242 146 L233 170 L204 182 L165 182 L145 198 L102 170 L80 145 L63 128 L72 97 Z"/>
+                <path d="M139 203 L193 215 L219 229 L215 255 L168 274 L156 260 L132 252 L124 227 Z"/>
+                <path d="M216 90 L289 78 L346 92 L390 112 L426 130 L418 157 L384 176 L343 170 L311 189 L274 186 L245 169 L228 142 L214 120 Z"/>
+                <path d="M240 191 L292 196 L335 208 L362 231 L353 270 L324 283 L296 272 L252 269 L220 250 L214 218 Z"/>
+                <path d="M351 101 L439 90 L478 98 L522 112 L531 146 L493 162 L451 170 L412 170 L373 152 L359 123 Z"/>
+                <path d="M456 182 L540 176 L578 190 L563 230 L514 238 L470 224 L447 203 Z"/>
+                <path d="M351 237 L412 230 L447 249 L438 310 L397 331 L347 315 L332 282 Z"/>
+                <path d="M449 240 L518 241 L560 254 L572 306 L531 329 L483 327 L452 293 Z"/>
+                <path d="M601 118 L663 100 L712 112 L739 133 L741 157 L699 174 L648 176 L616 150 Z"/>
+                <path d="M576 213 L635 204 L692 216 L699 248 L647 275 L592 268 L565 241 Z"/>
+                <path d="M648 279 L718 271 L763 286 L778 320 L741 344 L689 346 L645 326 Z"/>
+                <path d="M692 177 L745 180 L784 201 L799 234 L770 247 L739 235 L705 218 Z"/>
+              </g>
+
+              <g font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#0d1830" text-anchor="middle">
+                <text x="122" y="120">WA</text>
+                <text x="176" y="168">OR</text>
+                <text x="272" y="142">ID</text>
+                <text x="330" y="136">MT</text>
+                <text x="390" y="137">ND</text>
+                <text x="430" y="190">MN</text>
+                <text x="315" y="224">WY</text>
+                <text x="385" y="230">SD</text>
+                <text x="452" y="223">WI</text>
+                <text x="330" y="282">CO</text>
+                <text x="435" y="286">NE</text>
+                <text x="510" y="280">IA</text>
+                <text x="266" y="286">UT</text>
+                <text x="318" y="334">KS</text>
+                <text x="395" y="334">MO</text>
+                <text x="470" y="335">IL</text>
+                <text x="530" y="334">IN</text>
+                <text x="602" y="214">MI</text>
+                <text x="212" y="336">AZ</text>
+                <text x="266" y="390">NM</text>
+                <text x="345" y="375">OK</text>
+                <text x="420" y="375">AR</text>
+                <text x="510" y="370">KY</text>
+                <text x="575" y="352">TN</text>
+                <text x="642" y="332">NC</text>
+                <text x="705" y="328">VA</text>
+                <text x="735" y="292">PA</text>
+                <text x="285" y="420">TX</text>
+                <text x="370" y="420">LA</text>
+                <text x="447" y="420">MS</text>
+                <text x="520" y="420">AL</text>
+                <text x="590" y="420">GA</text>
+                <text x="660" y="420">FL</text>
+              </g>
+            </svg>
+          </div>
         </div>
 
         <div class="service-grid">
@@ -1003,83 +1157,63 @@
     <section id="contact">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <div class="eyebrow">Contact us</div>
-          <h2>Let's connect.</h2>
-          <p>Send a few details about your project and 5G Technology Partners can follow up to discuss your needs.</p>
-
-          <div class="contact-detail">
-            <div class="service-icon">✉</div>
-            <div>
-              <strong>Email</strong>
-              <span><a href="mailto:heather.wozniak@5gtechnologypartners.com">heather.wozniak@5gtechnologypartners.com</a></span>
-            </div>
-          </div>
+          <div class="eyebrow">Let’s connect</div>
+          <h2>Tell us about your project.</h2>
+          <p>We’re here to help you evaluate your connectivity needs and discuss what a practical, dependable solution could look like.</p>
 
           <div class="contact-detail">
             <div class="service-icon">☎</div>
             <div>
-              <strong>Phone</strong>
-              <span><a href="tel:7706764868">770-676-4868</a></span>
+              <strong>Call or connect</strong>
+              <span>Reach out to discuss your site, timeline, and goals.</span>
             </div>
           </div>
 
           <div class="contact-detail">
-            <div class="service-icon">⌖</div>
+            <div class="service-icon">⌁</div>
             <div>
-              <strong>Woodstock, GA, 30188</strong>
-              <span>Add your city and service region</span>
+              <strong>Service area</strong>
+              <span>Support for residential, commercial, and infrastructure projects.</span>
             </div>
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" action="https://formsubmit.co/heather.wozniak@5gtechnologypartners.com" method="POST">
-          <input type="hidden" name="_subject" value="New website inquiry - 5G Technology Partners">
-          <input type="hidden" name="_template" value="table">
-
+        <form class="contact-form">
           <div class="form-row">
             <div class="field">
-              <label for="name">Full name *</label>
-              <input id="name" name="name" autocomplete="name" required placeholder="Your name">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name">
             </div>
-
             <div class="field">
-              <label for="email">Email address *</label>
-              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com">
             </div>
           </div>
 
           <div class="form-row">
             <div class="field">
-              <label for="phone">Phone Number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Enter your phone number">
+              <label for="company">Company</label>
+              <input id="company" type="text" placeholder="Company / property">
             </div>
-
             <div class="field">
-              <label for="service">Service needed *</label>
-              <select id="service" name="service" required>
-                <option value="">Choose a service</option>
-                <option>Fiber optic installation</option>
+              <label for="service">Service Needed</label>
+              <select id="service">
+                <option>Fiber installation</option>
                 <option>Structured cabling</option>
                 <option>Testing & troubleshooting</option>
                 <option>Network upgrades</option>
-                <option>Residential & commercial work</option>
                 <option>Project consultation</option>
               </select>
             </div>
           </div>
 
           <div class="field">
-            <label for="message">Project details *</label>
-            <textarea id="message" name="message" required placeholder="Tell us about your project, location, and timeline..."></textarea>
+            <label for="message">Project details</label>
+            <textarea id="message" placeholder="Tell us about your project, location, and any goals or constraints."></textarea>
           </div>
 
-          <button class="button button-primary" type="submit">Send Project Inquiry →</button>
-
-          <p class="form-note">
-            Your message will be sent securely through our contact form service. On the first submission, the business email may need to be verified before messages can be delivered.
-          </p>
-
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <button class="button button-primary" type="submit">Send Inquiry →</button>
+          <p class="form-note">We typically respond within one business day.</p>
         </form>
       </div>
     </section>
@@ -1091,21 +1225,14 @@
         <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo">
       </a>
 
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#process">Our Process</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
 
-      <div class="copyright">© <span id="year"></span> 5G Technology Partners. All rights reserved.</div>
-    </div>
-
-    <div class="social-links">
-      <a href="https://www.facebook.com/profile.php?id=61595983370484" target="_blank" rel="noopener noreferrer" aria-label="Visit 5G Technology Partners on Facebook">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook" class="facebook-icon">
-        <span>Follow Us on Facebook</span>
-      </a>
+      <div class="copyright">© 2025 5G Technology Partners. All rights reserved.</div>
     </div>
   </footer>
 
@@ -1113,21 +1240,12 @@
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
 
-    menuToggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', String(open));
-      menuToggle.textContent = open ? '✕ Close' : '☰ Menu';
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰ Menu';
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
       });
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
+    }
   </script>
 </body>
 </html>
