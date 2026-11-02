@@ -371,9 +371,8 @@
     .services, .process, .cta-band { background: var(--pale); }
 
     .service-spotlight {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 20px;
+      display: flex;
+      justify-content: center;
       align-items: center;
       margin: 0 0 36px;
       padding: 10px 0 0;
@@ -411,37 +410,6 @@
       letter-spacing: -.05em;
       line-height: .9;
       margin-top: 2px;
-    }
-
-    .service-map-panel {
-      position: relative;
-      min-height: 385px;
-      background: #f2f2f2;
-      border: 1px solid rgba(0,0,0,.1);
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
-    }
-
-    .map-label {
-      position: absolute;
-      top: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: #0c1d35;
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .02em;
-      font-style: italic;
-      white-space: nowrap;
-    }
-
-    .service-map {
-      position: absolute;
-      inset: 26px 12px 8px;
-      width: calc(100% - 24px);
-      height: calc(100% - 34px);
-      display: block;
     }
 
     .service-grid {
@@ -755,7 +723,7 @@
       .service-grid { grid-template-columns: repeat(2,1fr); }
       .process-grid { grid-template-columns: repeat(2,1fr); }
       .about-grid { gap: 32px; }
-      .service-spotlight { grid-template-columns: 1fr; }
+      .service-spotlight { justify-content: center; }
       .service-coverage-copy { align-items: center; }
     }
 
@@ -809,8 +777,6 @@
       .hero-points { flex-direction: column; gap: 10px; }
       .trust-grid { gap: 14px 8px; }
       .trust-item { font-size: .75rem; }
-      .service-map-panel { min-height: 260px; }
-      .map-label { font-size: .66rem; }
     }
   </style>
 </head>
@@ -845,7 +811,7 @@
           <div class="eyebrow">Technology that moves you forward</div>
           <h1>Building connections for a <span>faster future.</span></h1>
           <p class="hero-tagline">Fiber-Focused. Future-Ready. Family Owned</p>
-          <p class="hero-copy">5G Technology Partners is a family-owned company with well over 10 years of experience specializing in underground and aerial fiber installation. We’ve proudly served communities and businesses with dependable, thoughtful infrastructure that keeps projects moving.</p>
+          <p class="hero-copy">5G Technology Partners is a family-owned company with well over 10 years of experience specializing in underground and aerial fiber installation. We’ve proudly served communities, businesses, and developers throughout the region with dependable, high-performance network builds and repair support.</p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Talk to Our Team →</a>
@@ -915,77 +881,6 @@
             <span class="small">YEARS OF</span>
             <span class="small">EXPERTISE</span>
           </div>
-
-          <div class="service-map-panel" aria-label="United States coverage map">
-            <div class="map-label">advanced telecommunications networks.</div>
-            <svg class="service-map" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coverage map of the United States">
-              <g fill="#0b0b0b">
-                <path d="M118 62L182 42L248 54L298 66L332 84L354 106L344 143L302 170L244 162L196 178L150 170L122 146L104 102Z"/>
-                <path d="M112 180L172 190L204 206L205 236L176 254L144 250L120 220Z"/>
-                <path d="M207 96L282 82L340 92L398 110L432 126L416 164L368 182L322 176L286 185L242 176L212 142Z"/>
-                <path d="M238 188L296 194L332 212L354 236L346 278L320 290L282 282L246 274L214 250L210 218Z"/>
-                <path d="M344 102L434 90L476 98L518 110L530 146L500 162L454 170L410 170L374 152L356 124Z"/>
-                <path d="M454 182L542 176L584 188L570 232L516 242L470 224L450 206Z"/>
-                <path d="M350 238L410 230L444 248L436 312L392 332L348 318L332 286Z"/>
-                <path d="M449 240L520 240L558 252L572 306L532 330L486 328L454 294Z"/>
-                <path d="M596 118L664 102L712 112L738 132L740 158L700 174L650 176L612 150Z"/>
-                <path d="M576 214L634 206L694 216L700 246L648 274L592 268L568 242Z"/>
-                <path d="M648 280L718 272L762 286L780 320L742 344L688 346L646 326Z"/>
-                <path d="M694 176L744 180L784 202L798 234L770 246L736 236L706 218Z"/>
-              </g>
-
-              <g fill="#4c66d6" stroke="#4c66d6" stroke-width="2">
-                <path d="M128 83L174 66L198 76L220 86L220 118L192 138L160 142L132 132L118 110Z"/>
-                <path d="M146 172L176 176L196 190L194 214L166 226L140 222L128 200Z"/>
-                <path d="M244 94L304 90L354 100L392 112L418 126L414 156L382 170L334 170L296 182L248 176L230 152L232 118Z"/>
-                <path d="M250 196L298 202L334 214L350 236L344 266L306 278L262 274L224 258L212 224Z"/>
-                <path d="M350 102L436 94L478 102L514 116L524 144L496 160L452 166L410 166L374 156L356 126Z"/>
-                <path d="M456 182L532 180L570 188L566 228L514 236L470 224L452 206Z"/>
-                <path d="M356 238L410 232L442 248L436 304L398 326L354 314L336 286Z"/>
-                <path d="M450 238L514 240L554 252L566 300L532 328L486 328L454 294Z"/>
-                <path d="M600 118L664 104L710 112L734 128L738 154L700 170L652 170L610 148Z"/>
-                <path d="M578 214L634 206L690 216L696 244L648 272L594 268L568 242Z"/>
-                <path d="M650 278L718 272L758 286L774 320L738 342L688 342L652 324Z"/>
-                <path d="M694 176L744 180L780 200L796 230L768 244L738 236L708 220Z"/>
-              </g>
-
-              <g font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#0b162d" text-anchor="middle">
-                <text x="122" y="118">WA</text>
-                <text x="176" y="170">OR</text>
-                <text x="268" y="142">ID</text>
-                <text x="330" y="136">MT</text>
-                <text x="392" y="138">ND</text>
-                <text x="432" y="186">MN</text>
-                <text x="316" y="224">WY</text>
-                <text x="386" y="232">SD</text>
-                <text x="454" y="224">WI</text>
-                <text x="332" y="282">CO</text>
-                <text x="436" y="288">NE</text>
-                <text x="507" y="280">IA</text>
-                <text x="266" y="286">UT</text>
-                <text x="318" y="334">KS</text>
-                <text x="396" y="334">MO</text>
-                <text x="470" y="338">IL</text>
-                <text x="530" y="336">IN</text>
-                <text x="604" y="214">MI</text>
-                <text x="212" y="336">AZ</text>
-                <text x="266" y="390">NM</text>
-                <text x="346" y="374">OK</text>
-                <text x="420" y="376">AR</text>
-                <text x="510" y="370">KY</text>
-                <text x="576" y="352">TN</text>
-                <text x="642" y="332">NC</text>
-                <text x="706" y="328">VA</text>
-                <text x="736" y="292">PA</text>
-                <text x="286" y="420">TX</text>
-                <text x="370" y="420">LA</text>
-                <text x="447" y="420">MS</text>
-                <text x="520" y="420">AL</text>
-                <text x="590" y="420">GA</text>
-                <text x="660" y="420">FL</text>
-              </g>
-            </svg>
-          </div>
         </div>
 
         <div class="service-grid">
@@ -999,84 +894,55 @@
           <article class="service-card">
             <div class="service-icon">▤</div>
             <h3>Structured Cabling</h3>
-            <p>Organized cabling infrastructure to support reliable data, voice, and network connections.</p>
+            <p>Organized cable pathways and network infrastructure designed for reliable performance and easy maintenance.</p>
             <a class="learn" href="#contact">Learn more →</a>
           </article>
 
           <article class="service-card">
-            <div class="service-icon">⌕</div>
+            <div class="service-icon">⚡</div>
             <h3>Testing & Troubleshooting</h3>
-            <p>Investigate connectivity problems, test fiber links, and help identify issues affecting performance.</p>
-            <a class="learn" href="#contact">Learn more →</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">▦</div>
-            <h3>Network Upgrades</h3>
-            <p>Improve existing infrastructure and plan upgrades to meet changing bandwidth and technology needs.</p>
-            <a class="learn" href="#contact">Learn more →</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">⌂</div>
-            <h3>Residential & Commercial</h3>
-            <p>Connectivity solutions for homes, offices, commercial spaces, and property improvement projects.</p>
-            <a class="learn" href="#contact">Learn more →</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon">◇</div>
-            <h3>Project Consultation</h3>
-            <p>Discuss your goals, site requirements, and potential approaches before work begins.</p>
+            <p>Field diagnostics and verification services that maintain uptime, signal integrity, and reduced downtime.</p>
             <a class="learn" href="#contact">Learn more →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section class="about" id="about">
       <div class="container about-grid">
         <div class="about-visual" aria-hidden="true">
-          <svg viewBox="0 0 320 260" fill="none">
-            <rect x="66" y="34" width="188" height="174" rx="16" fill="#0D3157" stroke="#9BD83F" stroke-opacity=".8" stroke-width="2"/>
-            <rect x="84" y="54" width="152" height="30" rx="6" fill="#092341" stroke="#38D9EE" stroke-opacity=".7"/>
-            <rect x="84" y="96" width="152" height="30" rx="6" fill="#092341" stroke="#38D9EE" stroke-opacity=".7"/>
-            <rect x="84" y="138" width="152" height="30" rx="6" fill="#092341" stroke="#38D9EE" stroke-opacity=".7"/>
-            <g fill="#9BD83F">
-              <circle cx="100" cy="69" r="4"/><circle cx="113" cy="69" r="4"/>
-              <circle cx="100" cy="111" r="4"/><circle cx="113" cy="111" r="4"/>
-              <circle cx="100" cy="153" r="4"/><circle cx="113" cy="153" r="4"/>
-            </g>
-            <g stroke="#38D9EE" stroke-width="2" stroke-linecap="round">
-              <path d="M132 69H218"/><path d="M132 111H218"/><path d="M132 153H218"/>
-            </g>
-            <path d="M160 208V231M126 231H194" stroke="#9BD83F" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="160" cy="230" r="5" fill="#E7FFFF"/>
+          <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="160" r="130" stroke="rgba(155,216,63,0.45)" stroke-width="1.2"/>
+            <circle cx="160" cy="160" r="80" stroke="rgba(56,217,238,0.45)" stroke-width="1.2"/>
+            <path d="M64 205C94 162 119 130 160 122C195 115 231 130 255 168" stroke="url(#networkGlow)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M90 235C121 196 139 170 160 162C186 151 213 160 236 190" stroke="rgba(155,216,63,0.75)" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="64" cy="205" r="8" fill="#38d9ee"/>
+            <circle cx="255" cy="168" r="9" fill="#9bd83f"/>
+            <circle cx="160" cy="122" r="6" fill="#eaffd0"/>
+            <defs>
+              <linearGradient id="networkGlow" x1="64" y1="205" x2="255" y2="168" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#394bb8"/>
+                <stop offset="0.55" stop-color="#38d9ee"/>
+                <stop offset="1" stop-color="#9bd83f"/>
+              </linearGradient>
+            </defs>
           </svg>
-
           <div class="about-note">
-            <strong>Reliable networks start with a strong foundation.</strong>
-            <span>Plan carefully. Install thoughtfully. Keep the bigger picture in view.</span>
+            <strong>Built for reliability</strong>
+            <span>Strong guidance, clean installs, and durable system performance.</span>
           </div>
         </div>
 
         <div class="about-copy">
-          <div class="eyebrow">About 5G Technology Partners</div>
-          <h2>Technology partnerships. Practical connectivity.</h2>
-          <p>
-            Our focus is helping customers move forward with network infrastructure that fits their needs.
-            We value clear communication, careful planning, and attention to the details that make a project
-            effective and dependable from the start.
-          </p>
-
+          <div class="eyebrow">About us</div>
+          <h2>Dependable networks start with people who understand the work.</h2>
+          <p>We are proud to deliver dependable infrastructure solutions for residential and commercial clients alike. From underground and aerial fiber installation to network troubleshooting and upgrades, our team helps keep communications strong, efficient, and ready for the future.</p>
           <ul class="benefits">
-            <li><i class="check">✓</i><span>Solutions tailored to project goals and site requirements</span></li>
-            <li><i class="check">✓</i><span>Careful attention to cable routing and organization</span></li>
-            <li><i class="check">✓</i><span>Clear communication throughout the project</span></li>
-            <li><i class="check">✓</i><span>Planning that considers future connectivity needs</span></li>
+            <li><i class="check">✓</i> Experience-driven planning and installation across a wide range of project types</li>
+            <li><i class="check">✓</i> Clear communication and practical solutions tailored to each property or site</li>
+            <li><i class="check">✓</i> Quality-focused service designed around long-term performance and simplicity</li>
           </ul>
-
-          <a class="button button-primary" href="#contact">Start a Conversation →</a>
+          <a class="button button-primary" href="#contact">Request a Quote</a>
         </div>
       </div>
     </section>
@@ -1085,34 +951,34 @@
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">Our process</div>
-          <h2>From first conversation to final review.</h2>
-          <p>A straightforward process helps keep expectations clear and projects organized.</p>
+          <h2>Simple steps, strong outcomes.</h2>
+          <p>We keep each project organized, responsive, and aligned with the needs of the people involved.</p>
         </div>
 
         <div class="process-grid">
-          <article class="step">
-            <div class="step-number">STEP 01</div>
-            <h3>Tell Us Your Goals</h3>
-            <p>Share the project location, needs, and any connectivity challenges you're facing.</p>
-          </article>
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Consult</h3>
+            <p>We learn about your goals, site conditions, and the infrastructure needed for your project.</p>
+          </div>
 
-          <article class="step">
-            <div class="step-number">STEP 02</div>
-            <h3>Plan the Scope</h3>
-            <p>Discuss site requirements, possible solutions, timing, and an estimate for the work.</p>
-          </article>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Plan</h3>
+            <p>We map out the work, sequence the installation, and keep timelines realistic from the start.</p>
+          </div>
 
-          <article class="step">
-            <div class="step-number">STEP 03</div>
-            <h3>Complete the Work</h3>
-            <p>Carry out the agreed installation or infrastructure work with care and attention.</p>
-          </article>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Install</h3>
+            <p>Our team handles the cable work and network build with an eye on quality, safety, and performance.</p>
+          </div>
 
-          <article class="step">
-            <div class="step-number">STEP 04</div>
-            <h3>Review & Test</h3>
-            <p>Review the completed work and any testing results or recommended next steps.</p>
-          </article>
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Support</h3>
+            <p>We help maintain reliable solutions long after installation through diagnostics and responsive service.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -1121,106 +987,103 @@
       <div class="container">
         <div class="cta-inner">
           <div>
-            <h2>Have a connectivity project in mind?</h2>
-            <p>Let's discuss the right next step for your home or business.</p>
+            <h2>Need a reliable network partner?</h2>
+            <p>Let’s talk about your project and build a smarter path forward.</p>
           </div>
-          <a class="button" href="#contact">Request a Quote →</a>
+          <a class="button" href="#contact">Start a Conversation</a>
         </div>
       </div>
     </div>
 
-    <section id="contact">
+    <section class="contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy">
-          <div class="eyebrow">Let’s connect</div>
-          <h2>Tell us about your project.</h2>
-          <p>We’re here to help you evaluate your connectivity needs and discuss what a practical, dependable solution could look like.</p>
+          <div class="eyebrow">Contact</div>
+          <h2>Let’s build what’s next.</h2>
+          <p>Whether you’re planning a new installation or upgrading an existing network, we’re ready to help with the next step.</p>
 
           <div class="contact-detail">
             <div class="service-icon">☎</div>
             <div>
-              <strong>Call or connect</strong>
-              <span>Reach out to discuss your site, timeline, and goals.</span>
+              <strong>Phone</strong>
+              <span>(555) 123-4567</span>
             </div>
           </div>
 
           <div class="contact-detail">
-            <div class="service-icon">⌁</div>
+            <div class="service-icon">✉</div>
             <div>
-              <strong>Service area</strong>
-              <span>Support for residential, commercial, and infrastructure projects.</span>
+              <strong>Email</strong>
+              <span>connect@5gtechpartners.com</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="service-icon">⌂</div>
+            <div>
+              <strong>Service Area</strong>
+              <span>Residential, commercial, and community network projects</span>
             </div>
           </div>
         </div>
 
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name">
+        <div class="contact-form">
+          <form>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your full name">
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="you@example.com">
+              </div>
             </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com">
-            </div>
-          </div>
 
-          <div class="form-row">
-            <div class="field">
-              <label for="company">Company</label>
-              <input id="company" type="text" placeholder="Company / property">
+            <div class="form-row">
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" type="text" name="company" placeholder="Business or organization">
+              </div>
+              <div class="field">
+                <label for="project-type">Project Type</label>
+                <select id="project-type" name="project-type">
+                  <option>Fiber Installation</option>
+                  <option>Structured Cabling</option>
+                  <option>Testing & Troubleshooting</option>
+                  <option>Network Upgrade</option>
+                </select>
+              </div>
             </div>
+
             <div class="field">
-              <label for="service">Service Needed</label>
-              <select id="service">
-                <option>Fiber installation</option>
-                <option>Structured cabling</option>
-                <option>Testing & troubleshooting</option>
-                <option>Network upgrades</option>
-                <option>Project consultation</option>
-              </select>
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or network needs..."></textarea>
             </div>
-          </div>
 
-          <div class="field">
-            <label for="message">Project details</label>
-            <textarea id="message" placeholder="Tell us about your project, location, and any goals or constraints."></textarea>
-          </div>
-
-          <button class="button button-primary" type="submit">Send Inquiry →</button>
-          <p class="form-note">We typically respond within one business day.</p>
-        </form>
+            <button class="button button-primary" type="submit">Send Request</button>
+            <p class="form-note">We typically respond within one business day.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <a class="brand" href="#home" aria-label="5G Technology Partners home">
-        <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo">
-      </a>
-
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#process">Our Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
+    <div class="container">
+      <div class="footer-inner">
+        <a class="brand" href="#home" aria-label="5G Technology Partners home">
+          <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo">
+        </a>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Our Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
       <div class="copyright">© 2025 5G Technology Partners. All rights reserved.</div>
     </div>
   </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
-    }
-  </script>
 </body>
 </html>
