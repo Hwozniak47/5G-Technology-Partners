@@ -372,12 +372,12 @@
 
     .service-spotlight {
       display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 28px;
+      grid-template-columns: 220px 1fr;
+      gap: 20px;
       align-items: center;
       margin: 0 0 36px;
-      padding: 24px 18px 18px;
-      background: #010305;
+      padding: 10px 0 0;
+      background: transparent;
       border: 0;
       border-radius: 0;
       box-shadow: none;
@@ -388,46 +388,48 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: #2d4dac;
-      font-weight: 900;
+      color: #3d4eb0;
+      line-height: 0.8;
       letter-spacing: -.08em;
-      line-height: .8;
+      font-weight: 900;
       text-transform: uppercase;
       text-align: center;
+      padding-top: 10px;
+      transform: translateY(8px);
     }
 
     .service-coverage-copy .big {
       display: block;
-      font-size: clamp(3.4rem, 5vw, 7rem);
-      font-weight: 900;
-      line-height: .82;
+      font-size: clamp(5.8rem, 7vw, 9.5rem);
+      line-height: .8;
+      letter-spacing: -.08em;
     }
 
     .service-coverage-copy .small {
       display: block;
-      font-size: clamp(1.2rem, 1.7vw, 2rem);
+      font-size: clamp(1.1rem, 1.5vw, 1.8rem);
       letter-spacing: -.05em;
-      line-height: 1;
+      line-height: .9;
       margin-top: 2px;
     }
 
     .service-map-panel {
       position: relative;
-      min-height: 340px;
-      background: #f1f2f4;
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: 6px;
+      min-height: 385px;
+      background: #f2f2f2;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 0;
       overflow: hidden;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.25);
     }
 
     .map-label {
       position: absolute;
-      top: 14px;
+      top: 12px;
       left: 50%;
       transform: translateX(-50%);
-      color: #091a33;
-      font-size: .76rem;
+      color: #0c1d35;
+      font-size: .7rem;
       font-weight: 700;
       letter-spacing: .02em;
       font-style: italic;
@@ -436,9 +438,9 @@
 
     .service-map {
       position: absolute;
-      inset: 30px 10px 8px;
-      width: calc(100% - 20px);
-      height: calc(100% - 30px);
+      inset: 26px 12px 8px;
+      width: calc(100% - 24px);
+      height: calc(100% - 34px);
       display: block;
     }
 
@@ -709,11 +711,6 @@
       font-size: .8rem;
     }
 
-    .form-status {
-      color: #087c52;
-      font-weight: 700;
-    }
-
     footer {
       padding: 30px 0;
       color: #c0cfe2;
@@ -749,31 +746,6 @@
       border-top: 1px solid rgba(255,255,255,.13);
       color: #8fa5bf;
       font-size: .82rem;
-    }
-
-    .social-links {
-      text-align: center;
-      padding: 25px;
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .facebook-icon {
-      width: 30px;
-      height: 30px;
-      filter: invert(1);
-    }
-
-    .social-links a:hover {
-      color: #38bdf8;
     }
 
     @media (max-width: 900px) {
@@ -837,8 +809,8 @@
       .hero-points { flex-direction: column; gap: 10px; }
       .trust-grid { gap: 14px 8px; }
       .trust-item { font-size: .75rem; }
-      .service-map-panel { min-height: 280px; }
-      .map-label { font-size: .68rem; }
+      .service-map-panel { min-height: 260px; }
+      .map-label { font-size: .66rem; }
     }
   </style>
 </head>
@@ -947,65 +919,65 @@
           <div class="service-map-panel" aria-label="United States coverage map">
             <div class="map-label">advanced telecommunications networks.</div>
             <svg class="service-map" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coverage map of the United States">
-              <g fill="#101010">
-                <path d="M174 52L246 32L300 48L346 60L385 72L404 93L390 140L344 170L287 160L246 176L180 170L148 152L134 105L146 74Z"/>
-                <path d="M130 196L194 204L221 220L219 250L180 272L150 264L126 232Z"/>
-                <path d="M226 98L296 84L352 96L392 110L426 128L416 162L378 180L340 174L302 188L264 184L230 170L211 138Z"/>
-                <path d="M248 192L300 198L336 214L366 238L354 282L319 290L291 280L254 274L217 250L210 218Z"/>
-                <path d="M350 102L440 92L482 100L520 112L536 146L505 164L455 170L411 170L374 152L356 124Z"/>
-                <path d="M455 180L540 176L584 190L570 234L520 242L474 224L450 206Z"/>
-                <path d="M351 238L414 230L448 248L438 312L394 332L347 318L332 285Z"/>
-                <path d="M449 238L518 240L560 252L574 306L530 332L486 330L454 294Z"/>
-                <path d="M600 120L664 102L714 112L741 134L742 160L700 176L650 176L612 150Z"/>
-                <path d="M576 214L634 206L692 218L700 248L648 276L592 270L566 244Z"/>
-                <path d="M648 278L718 272L762 288L778 320L742 344L688 345L646 326Z"/>
-                <path d="M693 176L744 180L784 200L798 234L770 246L738 236L705 218Z"/>
+              <g fill="#0b0b0b">
+                <path d="M118 62L182 42L248 54L298 66L332 84L354 106L344 143L302 170L244 162L196 178L150 170L122 146L104 102Z"/>
+                <path d="M112 180L172 190L204 206L205 236L176 254L144 250L120 220Z"/>
+                <path d="M207 96L282 82L340 92L398 110L432 126L416 164L368 182L322 176L286 185L242 176L212 142Z"/>
+                <path d="M238 188L296 194L332 212L354 236L346 278L320 290L282 282L246 274L214 250L210 218Z"/>
+                <path d="M344 102L434 90L476 98L518 110L530 146L500 162L454 170L410 170L374 152L356 124Z"/>
+                <path d="M454 182L542 176L584 188L570 232L516 242L470 224L450 206Z"/>
+                <path d="M350 238L410 230L444 248L436 312L392 332L348 318L332 286Z"/>
+                <path d="M449 240L520 240L558 252L572 306L532 330L486 328L454 294Z"/>
+                <path d="M596 118L664 102L712 112L738 132L740 158L700 174L650 176L612 150Z"/>
+                <path d="M576 214L634 206L694 216L700 246L648 274L592 268L568 242Z"/>
+                <path d="M648 280L718 272L762 286L780 320L742 344L688 346L646 326Z"/>
+                <path d="M694 176L744 180L784 202L798 234L770 246L736 236L706 218Z"/>
               </g>
 
-              <g fill="#4d63c8" stroke="#4d63c8" stroke-width="2">
-                <path d="M128 102L172 86L198 98L218 104L218 130L196 146L160 150L138 136L118 118Z"/>
-                <path d="M146 174L178 180L198 194L192 216L166 224L140 222L126 200Z"/>
-                <path d="M248 96L310 90L356 102L394 116L418 132L414 156L380 170L334 170L298 180L252 174L230 152L232 118Z"/>
-                <path d="M250 196L298 202L334 214L352 238L344 268L304 280L264 274L226 260L214 224Z"/>
-                <path d="M352 104L440 96L480 104L515 116L524 144L498 158L455 166L414 166L376 156L358 126Z"/>
-                <path d="M456 182L534 180L570 188L566 228L514 236L470 224L452 206Z"/>
-                <path d="M356 238L410 232L444 250L436 306L397 326L354 315L336 286Z"/>
+              <g fill="#4c66d6" stroke="#4c66d6" stroke-width="2">
+                <path d="M128 83L174 66L198 76L220 86L220 118L192 138L160 142L132 132L118 110Z"/>
+                <path d="M146 172L176 176L196 190L194 214L166 226L140 222L128 200Z"/>
+                <path d="M244 94L304 90L354 100L392 112L418 126L414 156L382 170L334 170L296 182L248 176L230 152L232 118Z"/>
+                <path d="M250 196L298 202L334 214L350 236L344 266L306 278L262 274L224 258L212 224Z"/>
+                <path d="M350 102L436 94L478 102L514 116L524 144L496 160L452 166L410 166L374 156L356 126Z"/>
+                <path d="M456 182L532 180L570 188L566 228L514 236L470 224L452 206Z"/>
+                <path d="M356 238L410 232L442 248L436 304L398 326L354 314L336 286Z"/>
                 <path d="M450 238L514 240L554 252L566 300L532 328L486 328L454 294Z"/>
-                <path d="M602 116L666 104L712 112L734 128L738 154L700 170L652 170L612 148Z"/>
+                <path d="M600 118L664 104L710 112L734 128L738 154L700 170L652 170L610 148Z"/>
                 <path d="M578 214L634 206L690 216L696 244L648 272L594 268L568 242Z"/>
                 <path d="M650 278L718 272L758 286L774 320L738 342L688 342L652 324Z"/>
                 <path d="M694 176L744 180L780 200L796 230L768 244L738 236L708 220Z"/>
               </g>
 
-              <g font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#0c162d" text-anchor="middle">
-                <text x="118" y="122">WA</text>
-                <text x="170" y="172">OR</text>
-                <text x="270" y="142">ID</text>
-                <text x="330" y="134">MT</text>
+              <g font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#0b162d" text-anchor="middle">
+                <text x="122" y="118">WA</text>
+                <text x="176" y="170">OR</text>
+                <text x="268" y="142">ID</text>
+                <text x="330" y="136">MT</text>
                 <text x="392" y="138">ND</text>
-                <text x="430" y="188">MN</text>
-                <text x="314" y="224">WY</text>
-                <text x="385" y="230">SD</text>
+                <text x="432" y="186">MN</text>
+                <text x="316" y="224">WY</text>
+                <text x="386" y="232">SD</text>
                 <text x="454" y="224">WI</text>
                 <text x="332" y="282">CO</text>
                 <text x="436" y="288">NE</text>
-                <text x="510" y="280">IA</text>
+                <text x="507" y="280">IA</text>
                 <text x="266" y="286">UT</text>
                 <text x="318" y="334">KS</text>
-                <text x="398" y="334">MO</text>
-                <text x="472" y="338">IL</text>
-                <text x="532" y="334">IN</text>
-                <text x="606" y="214">MI</text>
-                <text x="211" y="336">AZ</text>
+                <text x="396" y="334">MO</text>
+                <text x="470" y="338">IL</text>
+                <text x="530" y="336">IN</text>
+                <text x="604" y="214">MI</text>
+                <text x="212" y="336">AZ</text>
                 <text x="266" y="390">NM</text>
                 <text x="346" y="374">OK</text>
                 <text x="420" y="376">AR</text>
                 <text x="510" y="370">KY</text>
-                <text x="574" y="352">TN</text>
+                <text x="576" y="352">TN</text>
                 <text x="642" y="332">NC</text>
                 <text x="706" y="328">VA</text>
-                <text x="734" y="292">PA</text>
-                <text x="286" y="421">TX</text>
+                <text x="736" y="292">PA</text>
+                <text x="286" y="420">TX</text>
                 <text x="370" y="420">LA</text>
                 <text x="447" y="420">MS</text>
                 <text x="520" y="420">AL</text>
