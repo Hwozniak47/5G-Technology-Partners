@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="5G Technology Partners delivers fiber optic, connectivity, and network infrastructure solutions for businesses and communities.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="5G Technology Partners delivers fiber optic, connectivity, and network infrastructure solutions for businesses and communities." />
   <title>5G Technology Partners | Fiber Optics & Network Solutions</title>
 
   <style>
@@ -18,10 +18,12 @@
       --pale: #f3f7fc;
       --line: #dfe7f1;
       --white: #fff;
+      --shadow: rgba(7, 26, 51, 0.12);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
     body {
       margin: 0;
       font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -30,8 +32,14 @@
       background: #fff;
     }
 
+    img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
-    .container { width: min(1140px, calc(100% - 40px)); margin: 0 auto; }
+    button, input, select, textarea { font: inherit; }
+
+    .container {
+      width: min(1140px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
     .topbar {
       background: #050b17;
@@ -39,19 +47,22 @@
       font-size: .86rem;
       padding: 8px 0;
     }
+
     .topbar-inner {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       gap: 8px 20px;
     }
+
     .topbar a { color: var(--green); }
 
     header {
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255,255,255,.97);
+      background: rgba(255,255,255,0.97);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
@@ -100,7 +111,7 @@
       cursor: pointer;
       font: inherit;
       font-weight: 800;
-      transition: transform .2s, box-shadow .2s, background .2s;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
 
     .button:hover { transform: translateY(-2px); }
@@ -110,6 +121,7 @@
       color: white;
       box-shadow: 0 10px 22px rgba(57,75,184,.22);
     }
+
     .button-primary:hover { background: #293a9d; }
 
     .button-outline {
@@ -372,15 +384,15 @@
 
     .service-spotlight {
       display: grid;
-      grid-template-columns: 220px minmax(0, 1fr);
+      grid-template-columns: 220px minmax(0,1fr);
       gap: 28px;
       align-items: center;
       margin: 0 0 36px;
-      padding: 24px 20px 18px;
-      border-radius: 24px;
-      background: #050b17;
-      border: 1px solid rgba(57,75,184,.2);
-      box-shadow: 0 28px 50px rgba(6,14,27,.18);
+      padding: 20px 18px 16px;
+      border-radius: 22px;
+      background: #f5f7fb;
+      border: 1px solid rgba(11,18,32,.06);
+      box-shadow: 0 18px 40px rgba(7,26,51,.08);
     }
 
     .service-coverage-copy {
@@ -388,54 +400,53 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      color: #4c67d6;
-      text-transform: uppercase;
-      line-height: .82;
-      letter-spacing: -.08em;
+      color: var(--blue);
       font-weight: 900;
+      line-height: 0.82;
+      letter-spacing: -.08em;
+      text-transform: uppercase;
     }
 
     .service-coverage-copy .big {
-      font-size: clamp(3.4rem, 5vw, 7.1rem);
       display: block;
-      text-shadow: 0 0 18px rgba(76,103,214,.22);
+      font-size: clamp(3rem, 5vw, 6.2rem);
     }
 
     .service-coverage-copy .small {
-      font-size: clamp(1rem, 1.8vw, 2.1rem);
-      letter-spacing: -.05em;
       display: block;
       margin-top: 6px;
+      font-size: clamp(1rem, 1.9vw, 1.8rem);
+      letter-spacing: -.05em;
     }
 
     .service-map-panel {
       position: relative;
       min-height: 340px;
-      padding: 24px 18px 10px;
-      border-radius: 18px;
-      background: #f4f5f7;
-      overflow: hidden;
+      background: #f8f9fb;
       border: 1px solid rgba(11,18,32,.08);
+      border-radius: 18px;
+      overflow: hidden;
+      padding: 18px 14px 10px;
     }
 
-    .service-map-panel .map-label {
+    .map-label {
       position: absolute;
       top: 14px;
       left: 50%;
       transform: translateX(-50%);
-      white-space: nowrap;
-      color: #071a33;
+      color: #0d1d35;
       font-size: .76rem;
       font-weight: 700;
       letter-spacing: .02em;
       font-style: italic;
+      white-space: nowrap;
     }
 
     .service-map {
       position: absolute;
-      inset: 30px 14px 10px;
-      width: calc(100% - 28px);
-      height: calc(100% - 40px);
+      inset: 28px 12px 10px;
+      width: calc(100% - 24px);
+      height: calc(100% - 36px);
       display: block;
     }
 
@@ -686,7 +697,6 @@
       border-radius: 10px;
       background: #fbfdff;
       color: var(--text);
-      font: inherit;
       outline: none;
     }
 
@@ -704,11 +714,6 @@
       margin: 12px 0 0;
       color: var(--muted);
       font-size: .8rem;
-    }
-
-    .form-status {
-      color: #087c52;
-      font-weight: 700;
     }
 
     footer {
@@ -746,31 +751,6 @@
       border-top: 1px solid rgba(255,255,255,.13);
       color: #8fa5bf;
       font-size: .82rem;
-    }
-
-    .social-links {
-      text-align: center;
-      padding: 25px;
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .facebook-icon {
-      width: 30px;
-      height: 30px;
-      filter: invert(1);
-    }
-
-    .social-links a:hover {
-      color: #38bdf8;
     }
 
     @media (max-width: 900px) {
@@ -834,8 +814,8 @@
       .hero-points { flex-direction: column; gap: 10px; }
       .trust-grid { gap: 14px 8px; }
       .trust-item { font-size: .75rem; }
-      .service-map-panel { min-height: 280px; }
-      .service-map-panel .map-label { font-size: .68rem; }
+      .service-map-panel { min-height: 260px; }
+      .map-label { font-size: .66rem; }
     }
   </style>
 </head>
@@ -850,9 +830,11 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#home" aria-label="5G Technology Partners home">
-        <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo">
+        <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo" />
       </a>
+
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
+
       <nav class="nav-links" id="navLinks" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -870,7 +852,7 @@
           <div class="eyebrow">Technology that moves you forward</div>
           <h1>Building connections for a <span>faster future.</span></h1>
           <p class="hero-tagline">Fiber-Focused. Future-Ready. Family Owned</p>
-          <p class="hero-copy">5G Technology Partners is a family-owned company with well over 10 years of experience specializing in underground and aerial fiber installation. We’ve proudly served businesses and communities across the region with dependable infrastructure and practical connectivity solutions.</p>
+          <p class="hero-copy">5G Technology Partners is a family-owned company with well over 10 years of experience specializing in underground and aerial fiber installation. We’ve proudly served communities and businesses with dependable, thoughtful infrastructure that keeps projects moving.</p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Talk to Our Team →</a>
@@ -885,7 +867,7 @@
 
         <div class="signal-visual" aria-hidden="true">
           <div class="orb">
-            <svg viewBox="0 0 260 260" fill="none">
+            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="beam" x1="35" y1="218" x2="222" y2="40" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#394bb8"/>
@@ -937,45 +919,45 @@
             <span class="big">23</span>
             <span class="small">states</span>
             <span class="big" style="margin-top: 12px;">10+</span>
-            <span class="small">years of</span>
-            <span class="small">expertise</span>
+            <span class="small">years</span>
+            <span class="small">of expertise</span>
           </div>
 
           <div class="service-map-panel" aria-label="United States coverage map">
             <div class="map-label">advanced telecommunications networks.</div>
             <svg class="service-map" viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coverage map of the United States">
               <g fill="#0a0f1a">
-                <path d="M88 76 L143 58 L171 76 L205 88 L226 103 L220 128 L242 146 L233 170 L204 182 L165 182 L145 198 L102 170 L80 145 L63 128 L72 97 Z"/>
-                <path d="M139 203 L193 215 L219 229 L215 255 L168 274 L156 260 L132 252 L124 227 Z"/>
-                <path d="M216 90 L289 78 L346 92 L390 112 L426 130 L418 157 L384 176 L343 170 L311 189 L274 186 L245 169 L228 142 L214 120 Z"/>
-                <path d="M240 191 L292 196 L335 208 L362 231 L353 270 L324 283 L296 272 L252 269 L220 250 L214 218 Z"/>
-                <path d="M351 101 L439 90 L478 98 L522 112 L531 146 L493 162 L451 170 L412 170 L373 152 L359 123 Z"/>
-                <path d="M456 182 L540 176 L578 190 L563 230 L514 238 L470 224 L447 203 Z"/>
-                <path d="M351 237 L412 230 L447 249 L438 310 L397 331 L347 315 L332 282 Z"/>
-                <path d="M449 240 L518 241 L560 254 L572 306 L531 329 L483 327 L452 293 Z"/>
-                <path d="M601 118 L663 100 L712 112 L739 133 L741 157 L699 174 L648 176 L616 150 Z"/>
-                <path d="M576 213 L635 204 L692 216 L699 248 L647 275 L592 268 L565 241 Z"/>
-                <path d="M648 279 L718 271 L763 286 L778 320 L741 344 L689 346 L645 326 Z"/>
-                <path d="M692 177 L745 180 L784 201 L799 234 L770 247 L739 235 L705 218 Z"/>
+                <path d="M86 76L141 58L170 76L205 89L226 103L220 128L242 146L233 169L205 182L166 182L145 198L103 171L80 145L63 128L72 97Z"/>
+                <path d="M139 203L193 214L219 229L215 255L168 274L156 260L132 252L124 227Z"/>
+                <path d="M216 90L289 78L346 92L390 112L426 130L418 157L385 176L343 170L311 189L274 186L245 169L228 142L214 120Z"/>
+                <path d="M240 191L292 196L335 208L362 230L353 270L324 283L296 272L252 268L220 250L214 218Z"/>
+                <path d="M352 101L440 90L478 98L522 112L531 146L493 162L451 170L412 170L373 152L359 123Z"/>
+                <path d="M456 182L540 176L578 190L563 230L514 238L470 224L447 203Z"/>
+                <path d="M351 237L412 230L447 249L438 310L397 331L347 315L332 282Z"/>
+                <path d="M449 240L518 241L560 254L572 306L531 329L483 327L452 293Z"/>
+                <path d="M602 118L663 100L712 112L739 133L741 157L699 174L648 176L616 150Z"/>
+                <path d="M577 213L635 204L692 216L699 248L647 275L592 268L565 241Z"/>
+                <path d="M648 279L718 271L763 286L778 320L741 344L689 346L645 326Z"/>
+                <path d="M693 177L745 180L784 201L799 234L770 247L739 235L704 218Z"/>
               </g>
 
-              <g fill="#4d63c8" stroke="#3c4d95" stroke-width="2">
-                <path d="M88 76 L143 58 L171 76 L205 88 L226 103 L220 128 L242 146 L233 170 L204 182 L165 182 L145 198 L102 170 L80 145 L63 128 L72 97 Z"/>
-                <path d="M139 203 L193 215 L219 229 L215 255 L168 274 L156 260 L132 252 L124 227 Z"/>
-                <path d="M216 90 L289 78 L346 92 L390 112 L426 130 L418 157 L384 176 L343 170 L311 189 L274 186 L245 169 L228 142 L214 120 Z"/>
-                <path d="M240 191 L292 196 L335 208 L362 231 L353 270 L324 283 L296 272 L252 269 L220 250 L214 218 Z"/>
-                <path d="M351 101 L439 90 L478 98 L522 112 L531 146 L493 162 L451 170 L412 170 L373 152 L359 123 Z"/>
-                <path d="M456 182 L540 176 L578 190 L563 230 L514 238 L470 224 L447 203 Z"/>
-                <path d="M351 237 L412 230 L447 249 L438 310 L397 331 L347 315 L332 282 Z"/>
-                <path d="M449 240 L518 241 L560 254 L572 306 L531 329 L483 327 L452 293 Z"/>
-                <path d="M601 118 L663 100 L712 112 L739 133 L741 157 L699 174 L648 176 L616 150 Z"/>
-                <path d="M576 213 L635 204 L692 216 L699 248 L647 275 L592 268 L565 241 Z"/>
-                <path d="M648 279 L718 271 L763 286 L778 320 L741 344 L689 346 L645 326 Z"/>
-                <path d="M692 177 L745 180 L784 201 L799 234 L770 247 L739 235 L705 218 Z"/>
+              <g fill="#4d63c8" stroke="#3a4e99" stroke-width="2">
+                <path d="M86 76L141 58L170 76L205 89L226 103L220 128L242 146L233 169L205 182L166 182L145 198L103 171L80 145L63 128L72 97Z"/>
+                <path d="M139 203L193 214L219 229L215 255L168 274L156 260L132 252L124 227Z"/>
+                <path d="M216 90L289 78L346 92L390 112L426 130L418 157L385 176L343 170L311 189L274 186L245 169L228 142L214 120Z"/>
+                <path d="M240 191L292 196L335 208L362 230L353 270L324 283L296 272L252 268L220 250L214 218Z"/>
+                <path d="M352 101L440 90L478 98L522 112L531 146L493 162L451 170L412 170L373 152L359 123Z"/>
+                <path d="M456 182L540 176L578 190L563 230L514 238L470 224L447 203Z"/>
+                <path d="M351 237L412 230L447 249L438 310L397 331L347 315L332 282Z"/>
+                <path d="M449 240L518 241L560 254L572 306L531 329L483 327L452 293Z"/>
+                <path d="M602 118L663 100L712 112L739 133L741 157L699 174L648 176L616 150Z"/>
+                <path d="M577 213L635 204L692 216L699 248L647 275L592 268L565 241Z"/>
+                <path d="M648 279L718 271L763 286L778 320L741 344L689 346L645 326Z"/>
+                <path d="M693 177L745 180L784 201L799 234L770 247L739 235L704 218Z"/>
               </g>
 
               <g font-size="18" font-family="Arial, sans-serif" font-weight="700" fill="#0d1830" text-anchor="middle">
-                <text x="122" y="120">WA</text>
+                <text x="123" y="118">WA</text>
                 <text x="176" y="168">OR</text>
                 <text x="272" y="142">ID</text>
                 <text x="330" y="136">MT</text>
@@ -983,7 +965,7 @@
                 <text x="430" y="190">MN</text>
                 <text x="315" y="224">WY</text>
                 <text x="385" y="230">SD</text>
-                <text x="452" y="223">WI</text>
+                <text x="455" y="223">WI</text>
                 <text x="330" y="282">CO</text>
                 <text x="435" y="286">NE</text>
                 <text x="510" y="280">IA</text>
@@ -992,7 +974,7 @@
                 <text x="395" y="334">MO</text>
                 <text x="470" y="335">IL</text>
                 <text x="530" y="334">IN</text>
-                <text x="602" y="214">MI</text>
+                <text x="603" y="214">MI</text>
                 <text x="212" y="336">AZ</text>
                 <text x="266" y="390">NM</text>
                 <text x="345" y="375">OK</text>
@@ -1002,7 +984,7 @@
                 <text x="642" y="332">NC</text>
                 <text x="705" y="328">VA</text>
                 <text x="735" y="292">PA</text>
-                <text x="285" y="420">TX</text>
+                <text x="286" y="420">TX</text>
                 <text x="370" y="420">LA</text>
                 <text x="447" y="420">MS</text>
                 <text x="520" y="420">AL</text>
@@ -1062,7 +1044,7 @@
     <section id="about">
       <div class="container about-grid">
         <div class="about-visual" aria-hidden="true">
-          <svg viewBox="0 0 320 260" fill="none">
+          <svg viewBox="0 0 320 260" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="66" y="34" width="188" height="174" rx="16" fill="#0D3157" stroke="#9BD83F" stroke-opacity=".8" stroke-width="2"/>
             <rect x="84" y="54" width="152" height="30" rx="6" fill="#092341" stroke="#38D9EE" stroke-opacity=".7"/>
             <rect x="84" y="96" width="152" height="30" rx="6" fill="#092341" stroke="#38D9EE" stroke-opacity=".7"/>
@@ -1182,18 +1164,18 @@
           <div class="form-row">
             <div class="field">
               <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name">
+              <input id="name" type="text" placeholder="Your name" />
             </div>
             <div class="field">
               <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com">
+              <input id="email" type="email" placeholder="you@example.com" />
             </div>
           </div>
 
           <div class="form-row">
             <div class="field">
               <label for="company">Company</label>
-              <input id="company" type="text" placeholder="Company / property">
+              <input id="company" type="text" placeholder="Company / property" />
             </div>
             <div class="field">
               <label for="service">Service Needed</label>
@@ -1222,7 +1204,7 @@
   <footer>
     <div class="container footer-inner">
       <a class="brand" href="#home" aria-label="5G Technology Partners home">
-        <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo">
+        <img src="5g-technology-partners-logo.png" alt="5G Technology Partners logo" />
       </a>
 
       <nav class="footer-links" aria-label="Footer navigation">
